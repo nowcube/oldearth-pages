@@ -1,41 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OldEarth</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <section class="hero is-fullheight is-text-white">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-              <img src="img/oldearth.svg" style="width: 128px;" alt="">
-              <br><br>
-            <h1 class="title" style="font-weight: 100;">
-              OldEarth
-            </h1>
-            <br>
-            <h2 class="subtitle">
-              有趣的 “ 地球 ” 服务器
-            </h2>
-            <p>复刻真实地球</p>
-            <p>简约多元玩家社区</p>
-            <p>Towny插件，最新游戏版本支持</p>
-            <br>
-            <a class="button is-link is-outlined is-medium is-rounded mx-3" href="https://jq.qq.com/?_wv=1027&k=BDcHuLET" target="_blank"> <i class="fab fa-qq"></i></a>
-            <a class="button is-success is-outlined is-medium is-rounded mx-3" href="game.spawnmc.net:1605" target="_blank" > <i class="fas fa-map"></i></a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OldEarth</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" rel="stylesheet">
+  <link href="https://fonts.font.im/css?family=Black+Ops+One" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section class="hero is-fullheight">
+    <div class="hero-head">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <div class="navbar-item">
+            <a class="nav-bar-item has-text-dark mx-5" style="font-family: 'Black Ops One', cursive;font-size: 1.8rem;"
+              href="">OldEarth Server</a>
+          </div>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+
+
+          <div class="navbar-end">
+            <a class="navbar-item mx-2" href="https://jq.qq.com/?_wv=1027&k=BDcHuLET" target="_blank"><i
+                class="fab fa-qq"><strong> 加入群组</strong></i></a>
+            <a class="navbar-item mx-2" href="game.spawnmc.net:1605" target="_blank"> <i class="fas fa-map"><strong>
+                  动态地图</strong></i></a>
+            <a class="navbar-item mx-2" href="https://mineplugin.org/Towny" target="_blank"> <i
+                class="fas fa-book"><strong> 插件文档</strong></i></a>
+            <a class="navbar-item mx-2" href="https://api.oldearth.top" target="_blank"> <i class="fas fa-user"><strong>
+                  外置登录</strong></i></a>
           </div>
         </div>
-      </section>
-      <section class="hero">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <p>Copyright &copy; 2020 OldEarth , design by <a href="https://github.com/nowcube">nowcube</a> .</p>
-          </div>
-        </div>
-      </section>
-  </body>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <img src="img/oldearth.svg" style="width: 128px;" alt="">
+        <br><br>
+
+        <h1 class="title">
+          有趣的 “ 地球 ” 服务器
+        </h1>
+        <strong>
+          <p>复刻真实地球</p>
+          <p>简约多元玩家社区</p>
+          <p>Towny插件，最新游戏版本支持</p>
+        </strong>
+      </div>
+    </div>
+    <div class="hero-foot">
+
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+
+</body>
+
 </html>
